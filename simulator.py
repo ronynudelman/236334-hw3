@@ -32,10 +32,10 @@ class Simulator:
         self.printTimes = list()
 
     def createArrivalTimes(self):
-        t = 0
+        t = -log(random())/self.fIn
         while(t < self.totalTime):
-            t += -log(random())/self.fIn
             self.arrivalTimes.append(Event(t,False))
+            t += -log(random())/self.fIn
         self.last_arrival_time = self.arrivalTimes[-1].time
 
     def createPrintTimes(self):
