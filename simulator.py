@@ -16,10 +16,11 @@ def getArgs():
     return args
 
 
-@dataclass
+
 class Event:
-    time : float
-    isPrint : bool
+    def __init__(self,time,isPrint) -> None:
+        self.time : float = time
+        self.isPrint : bool = isPrint
 
 
 class Simulator:
